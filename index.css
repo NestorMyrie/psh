@@ -1,0 +1,364 @@
+*{
+ 
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pendientes{
+    margin-top:200px ;
+    text-align:left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pendientes li{
+    text-align: justify;
+}
+.prhase{
+    text-align: center;
+    margin-top: 200px;
+    padding: 50px 0px;
+    background: url('./arboles.png');
+    background-size: contain;
+    background-position: bottom;
+}
+.prhase h1{
+    font-size: 3em;;
+}
+.prhase b{
+    color:#fe0000b4
+}
+.prhase p{
+    font-size: 1.3em;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #F6F0F0;
+}
+.element{
+    display: flex;
+    width: 49%;
+    padding: 2% 2%;;
+   
+    justify-content: space-between;
+    text-decoration: none;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 100px 0px 0px 100px;
+    box-sizing: border-box;
+    z-index: 3 !important;
+    overflow: hidden;
+
+
+}
+.element p{
+    text-align: justify;
+    color:white;
+    width: 90%;
+}
+
+.element h3{
+    color:white;
+    width: 90%;
+}
+
+.element .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.element:nth-child(even) .info{
+
+    align-items: flex-start;
+
+}
+.element .logo{
+    height: 140px;
+    padding: 0px;
+    width: 50%;
+    max-width: 200px;
+    margin-left: 10px;
+
+
+}
+.element img{
+    height: 90%;
+    object-fit: contain;
+
+    width: 100%;
+
+
+}
+.element svg{
+    height: 100%;
+    border: 1px solid red;
+    max-width:100%;
+width: 200px;
+
+}
+
+
+
+
+    .element .logo{
+    padding: 2%;
+    }
+.element:nth-child(odd){
+flex-direction: row-reverse;
+border-radius: 0 100px 100px 0px;
+}
+
+.element h3{
+    font-size: 2em;
+}
+
+
+
+
+.pshreciclando,.pshled,.psh,.pshstore,.pshsatelita,.rainforest,.pshbitcoin,.yfse,.co2,.music{
+   
+    background-size:100%  !important;
+
+    background-position: center center;
+    position:relative;
+}
+.element:nth-child(even)::before{
+border-radius: 100px 0px 0px 100px;
+
+}
+.element::after {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.element:hover::after{
+        -webkit-animation: shine .75s;
+        animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+.element::before{
+   
+    content: '';
+    height: 100%;;
+    width: 100%;
+    position: absolute;
+    background: url('./pshsatelitalbg.png');
+    background-size:100%  !important;
+    transition: all 300ms;
+    z-index: -1;
+    left: 0;
+    border-radius: 0px 100px 100px 0px;
+}
+
+
+.element:hover::before{
+    background-size:105%  !important;
+    
+}
+.element.pshreciclando::before{
+    background: url('./reciclando.png');
+}
+.element.pshled::before{
+    background: url('./ledbg.png');
+}
+.element.psh::before{
+    background: url('./pshbg.png');
+}
+.element.pshstore::before{
+    background: url('./pshstorebg.png');
+}
+.element.rainforest::before{
+    background: url('/rainforest.png');
+
+}
+.element.pshbitcoin::before{
+background: url('./bitcoingbg.png');
+
+}
+
+.element.yfse::before{
+    background: url('./yfse.png');
+}
+.element.co2::before{
+    background: url('./co2.png');
+}
+.element.music::before{
+    background-image: url('./pshmusic.png');
+}
+
+
+@media screen and (max-width:1300px){
+  
+
+ 
+ 
+
+   
+   .element h3{
+        text-align: left !important;
+        color:white;
+        width: 90%;
+    }
+    
+    .element{
+        display: flex;
+        width: 100%;
+        padding: 2% 2%;;
+       
+    
+    }
+  
+    
+ 
+    
+    .element:nth-child(even) .info{
+    
+        align-items: flex-start;
+    
+    }
+    .element .info{
+        align-items: flex-start !important;
+    }
+   
+    
+    
+    
+    /* .element{
+        border-radius: 100px;
+        } */
+    .element:nth-child(odd){
+    flex-direction: row;
+    /* border-radius: 100px; */
+    }
+    
+   
+}
+
+
+@media screen and (max-width:800px){
+  
+    .prhase h1{
+        font-size: 2em;;
+    }
+
+   .prhase{
+    background-size: cover;    background-repeat: no-repeat;
+
+   }
+
+    .element{
+        display: flex;
+        width: 100%;
+        padding: 2% 2%;;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+       
+    
+    }
+    
+    .info p{
+        width: 100%;
+    }
+    .info h3{
+        width: auto;
+        text-align: center;
+        display: none;
+    }
+  
+    
+ 
+    
+    .element:nth-child(even) .info{
+    
+        align-items: center;
+
+    
+    
+    
+    }
+    .element .info{
+        align-items: center !important;
+    }
+   
+    
+    
+    
+    .element{
+        align-items: center;
+        border-radius: 0px;
+        flex-direction: column;
+        
+    }
+    .element:nth-child(odd){
+    flex-direction: column;
+    border-radius: 0px;
+    }
+
+    .element .logo{
+        height: 100px;
+        padding: 0px;
+        width: auto;
+        margin-left: 0px;
+    
+    }
+
+    .element::before{
+   
+        content: '';
+        height: 100%;;
+        width: 100%;
+        position: absolute;
+        background-size:100%  !important;
+        transition: all 300ms;
+        z-index: -1;
+        left: 0;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .element:nth-child(even)::before{
+   
+        content: '';
+        height: 100%;;
+        width: 100%;
+        position: absolute;
+        background-size:100%  !important;
+        transition: all 300ms;
+        z-index: -1;
+        left: 0;
+        border-radius: 0px 0px 0px 0px;
+    }
+    
+   
+}

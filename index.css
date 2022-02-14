@@ -11,6 +11,8 @@ body{
     align-items: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 30%;
+    overflow-x: hidden;
 }
 
 .pendientes{
@@ -189,33 +191,49 @@ border-radius: 100px 0px 0px 100px;
 }
 .element.pshreciclando::before{
     background: url('./reciclando.png');
+    background-size: cover;
 }
 .element.pshled::before{
     background: url('./ledbg.png');
+    background-size: cover;
+
 }
 .element.psh::before{
+
     background: url('./pshbg.png');
+    background-size: cover;
+
 }
 .element.pshstore::before{
     background: url('./pshstorebg.png');
+    background-size: cover;
+
 }
 .element.rainforest::before{
     background: url('/rainforest.png');
+    background-size: cover;
 
 }
 .element.pshbitcoin::before{
 background: url('./bitcoingbg.png');
+background-size: cover;
 
 }
 
 .element.yfse::before{
     background: url('./yfse.png');
+    background-size: cover;
+
 }
 .element.co2::before{
     background: url('./co2.png');
+    background-size: cover;
+
 }
 .element.music::before{
     background-image: url('./pshmusic.png');
+    background-size: cover;
+
 }
 
 
@@ -275,7 +293,6 @@ background: url('./bitcoingbg.png');
 
    .prhase{
     background-size: cover;    background-repeat: no-repeat;
-
    }
 
     .element{
@@ -320,7 +337,9 @@ background: url('./bitcoingbg.png');
         align-items: center;
         border-radius: 0px;
         flex-direction: column;
-        
+        padding: 15px 30px;
+      
+
     }
     .element:nth-child(odd){
     flex-direction: column;
@@ -361,4 +380,43 @@ background: url('./bitcoingbg.png');
     }
     
    
+}
+.left{
+    transition: all 300ms;
+    opacity: 0;
+}
+.right{
+    opacity: 0;
+
+}
+.leftanimation{
+    animation: moveleft 400ms forwards;
+}
+
+@keyframes moveleft{
+    from{
+        transform: translate(-40%);
+        
+    }
+    to{
+        transform: translate(0%);
+        opacity: 1;
+        
+    }
+}
+
+.rightanimation{
+    animation: moveright 400ms forwards;
+}
+
+@keyframes moveright{
+    from{
+        transform: translate(40%);
+        
+    }
+    to{
+        transform: translate(0%);
+        opacity: 1;
+        
+    }
 }
